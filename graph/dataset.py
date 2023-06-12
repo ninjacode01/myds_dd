@@ -291,7 +291,7 @@ class Dataset():
             g_list = self.read_send_gfile(d[3])
 
             for g_id in g_list.keys():
-                print(g_id)
+                print(f'gid : {g_id}')
                 #print("G : ", g_id, g_list[g_id])
                 graphFile = self.save_graph_file(g_list[g_id], g_id, d[0])
                 print("Graph File: ", graphFile)
