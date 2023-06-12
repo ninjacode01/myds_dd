@@ -290,14 +290,15 @@ class Dataset():
             g_list = self.read_send_gfile(d[3])
 
             for g_id in g_list.keys():
+                print(g_id)
                 #print("G : ", g_id, g_list[g_id])
                 graphFile = self.save_graph_file(g_list[g_id], g_id, d[0])
-                #print("Graph File: ", graphFile)
+                print("Graph File: ", graphFile)
                 s = self.generate_discriminative_subgraph(graphFile, d[0], d[5][0])
                 ds.subgraph_list[g_id] = s
                 #print("G: ", g_id, " \n S: ", s)
                 #ds.subgraph_list[g_id] = self.generate_discriminative_subgraph(graphFile, d[0], d[5][0])
-
+                print('----- Dataset [ %s ] prep----' % (d[0]))
             print('----- Dataset [ %s ] Created Successfully----' % (d[0]))
             return ds
         #except Exception as e:
