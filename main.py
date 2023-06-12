@@ -10,6 +10,7 @@ def main():
 
     #prepare datasets
     available_dataset = ds.get_available_dataset()
+    print('datasetmilgya')
     for dataset in available_dataset:
 
         #print("Subgraph List: ", dataset.subgraph_list)
