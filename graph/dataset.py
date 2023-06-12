@@ -266,7 +266,7 @@ class Dataset():
         command = GBAD.gbad_home + "/" + GBAD.run_command + " -nsubs " + str(
             param_n) + " -out " + subgraph_file + " " + graph_file + ">>" + output_file
 
-        # print(command)
+        print(command)
         os.system(command)
         return self.read_subgraph(subgraph_file)
 
