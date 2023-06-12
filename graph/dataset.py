@@ -219,6 +219,7 @@ class Dataset():
         #print("Message: ", sorted(node))
 
         fileName = GBAD.graph_folder + "/" + dataset_name + '.g'
+        print(f'file name : {fileName}')
         fw = open(fileName, "w")
         fw.write("XP # 1 //" + str(graphCount) + "\n")
         for key in sorted(node[:]):
@@ -230,7 +231,7 @@ class Dataset():
                 fw.write("d " + k[0] + " " + k[1] + " \"" + message['edge'][key] + "\"\n")
             else:
                 fw.write("d " + k[0] + " " + k[1] + "\n")
-
+        print(f'successfully written the file')
         return fileName
 
     def read_subgraph(self, subgraphFile):
