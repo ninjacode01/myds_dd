@@ -257,11 +257,11 @@ class Dataset():
     def generate_discriminative_subgraph(self, graph_file, dataset_name, param_n):
         subgraph_file = GBAD.graph_folder + "/" + "SG_" + dataset_name + '.g'
         output_file = GBAD.graph_folder + "/" + "out_" + dataset_name +'.txt'
-        try:
-            os.remove(subgraph_file)
-            os.remove(output_file)
-        except OSError:
-            pass
+#         try:
+#             os.remove(subgraph_file)
+#             os.remove(output_file)
+#         except OSError:
+#             pass
 
         command = GBAD.gbad_home + "/" + GBAD.run_command + " -nsubs " + str(
             param_n) + " -out " + subgraph_file + " " + graph_file + ">>" + output_file
