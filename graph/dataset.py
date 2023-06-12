@@ -308,6 +308,7 @@ class Dataset():
         # initialize all dataset
         available_dataset = []
         for d in DataList.data_list:
+            print(d)
             available_dataset.append(self.initialize_dataset(d)) #d[0], d[1], d[2], d[3], d[4]))
         print(available_dataset)
         return available_dataset
