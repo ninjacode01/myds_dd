@@ -66,7 +66,8 @@ class ChangeDetection:
             for k in r_[0:fold]:
                 Ktmp1 = K_de[:, cv_index_de[cv_split_de != k]];
                 Ktmp2 = K_nu[:, cv_index_nu[cv_split_nu != k]];
-                # print("Ktmp1: ",Ktmp1.shape[1], "Ktmp2: ",Ktmp2.shape[1])
+                
+                print("Ktmp1: ",Ktmp1.shape[1], "Ktmp2: ",Ktmp2.shape[1])
 
                 Ktmp = alpha / Ktmp2.shape[1] * dot(Ktmp2, Ktmp2.T) + \
                        (1 - alpha) / Ktmp1.shape[1] * dot(Ktmp1, Ktmp1.T);
@@ -75,6 +76,12 @@ class ChangeDetection:
 
                 for lambda_index in r_[0:size(lambda_list)]:
                     lbd = lambda_list[lambda_index];
+                    
+                    print("ktmp":ktmp)
+                    print("lbd":lbd)
+                    print("eyeb":eye(b))
+                    print("mktmp":mKtmp)
+                    
 
                     thetat_cv = linalg.solve(Ktmp + lbd * eye(b), mKtmp);
                     thetah_cv = thetat_cv;
