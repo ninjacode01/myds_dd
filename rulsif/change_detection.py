@@ -77,7 +77,7 @@ class ChangeDetection:
                 for lambda_index in r_[0:size(lambda_list)]:
                     lbd = lambda_list[lambda_index];
                     
-                    print("ktmp":ktmp)
+                    print("ktmp":Ktmp)
                     print("lbd":lbd)
                     print("eyeb":eye(b))
                     print("mktmp":mKtmp)
